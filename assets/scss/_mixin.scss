@@ -1,0 +1,52 @@
+@mixin btnStyle($width, $color, $h_Color, $bgColor, $h_bgColor){
+    width: $width;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1rem;
+    color: $color;
+    background-color: $bgColor;
+    letter-spacing: 1px;
+    border: 1px solid $h_Color;
+    text-align: center;
+    // padding: 0 2rem;
+    box-shadow: none;
+    cursor: pointer;
+    @include ease;
+    @include rounded(2px);
+    &:hover{
+        color: $h_Color;
+        // border-color: $bgColor;
+        background-color: $h_bgColor;
+    }
+
+    i{
+        margin-left: 10px;
+        position: absolute;
+        line-height: inherit;
+    }
+}
+
+@mixin scale($scale) {
+    // -webkit-transform: scale($scale);
+    transform: scale($scale);
+}
+
+@mixin rounded($radius: 5px) {
+    border-radius: $radius;
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+}
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin ease($time:0.2s){
+    // -moz-transition:    all $time cubic-bezier(0.62, 0.32, 0.51, 0.89);
+    // -webkit-transition: all $time cubic-bezier(0.62, 0.32, 0.51, 0.89);
+    transition:         all $time cubic-bezier(0.62, 0.32, 0.51, 0.89);
+}

@@ -1,0 +1,55 @@
+// font style
+@import "media";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,400italic,300italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,300,700);
+
+html{
+    font-size: 16px;
+}
+
+body {
+  font-family:'微軟正黑體', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 1.5;
+  color: white;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 3.125rem;
+    // font-weight: normal;
+    // line-height: 1.4;
+}
+
+h3 {
+    font-size: 2.125rem;
+    // font-weight: 500;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+h5 {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+h6 {
+    font-size: 1.125rem;
+    font-weight: 100;
+    line-height: 2;
+}
+
+P {
+    font-size: 0.87rem;
+}

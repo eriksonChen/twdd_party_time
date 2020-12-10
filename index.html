@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+  <title>TWDD - 派對餐廳</title>
+  <link rel="stylesheet" href="./assets/css/style.min.css">
+</head>
+<body>
+  <div id="vue" class="wrap" >
+    <div class="menu-content">
+      <div class="menu-title"><img src="./assets/img/logo-lg.png"></div>
+      <div class="menu-text btn" @click="goto(1)">home</div>
+      <div class="menu-text btn" @click="goto(3)">嚴選餐廳</div>
+      <div class="menu-text btn" @click="goto(5)">活動說明</div>
+      <div class="menu-text btn" @click="goto(6)">關於台灣代駕</div>
+    </div>
+    <div class="menu-btn" @click="menuBtn">
+      <img src="./assets/img/menu.png" alt="menu">
+    </div>
+    <section class="sec-1">
+      <div class="logo-lg">
+        <img src="./assets/img/logo-lg.png" alt="logo-lg">
+      </div>
+      <div class="title gold text-center">
+        用餐付款X呼叫代駕 <br>
+        台灣代駕APP 完整你的派對時光！
+      </div>
+    </section>
+
+    <section class="sec-2 text-center">
+      <div class="date">2020.12.25 — 2021.02.28</div>
+      <div class="title">
+        <strong>10</strong>種主題、<strong>30</strong>家餐廳、<br class="show-sm">最高<strong>64</strong>折破表回饋<br>
+        <div class="text">台灣代駕SCAN&PAY<br class="show-sm">  結帳享3重優惠</div>
+        
+      </div>
+
+      <div class="step-list">
+        <div class="step">
+          <img src="./assets/img/svg/icon-1.svg">
+          <div class="title gold">台灣代駕 專屬優惠</div>
+          <div class="line"></div>
+          <div class="text">SCAN & PAY結帳<br>享 85 折起優惠</div>
+        </div>
+        <div class="step">
+          <img src="./assets/img/svg/icon-2.svg">
+          <div class="title gold">永豐加碼優惠</div>
+          <div class="line"></div>
+          <div class="text">永豐信用卡<br>全卡別 15%</div>
+        </div>
+        <div class="step">
+          <img src="./assets/img/svg/icon-3.svg">
+          <div class="title gold">永豐xApple Pay優惠</div>
+          <div class="line"></div>
+          <div class="text">Apple Pay綁永豐卡 <br>再加碼 10%</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-3">
+      <div class="top">
+        <div class="text gold">10種主題派對</div>
+        <div class="logo-sm"><img src="./assets/img/logo-lg.png"></div>
+        <div class="text gold">30家嚴選餐廳</div>
+      </div>
+      <div class="plat-list">
+        <div class="plat"><img width="247" src="./assets/img/plate-1.png"></div>
+        <div class="plat"><img src="./assets/img/plate-2.png"></div>
+        <div class="plat"><img src="./assets/img/plate-3.png"></div>
+      </div>
+    </section>
+
+    <section class="sec-4">
+      <div class="nav">
+        <div class="btn active" @click="navBtn">
+          <div class="tt">
+            台式熱炒<small>Stir-Fries</small>
+          </div>
+        </div>
+        <div class="btn" @click="navBtn">
+          <div class="tt">
+            中餐廳<small>Chinese Cuisine</small> 
+          </div>
+        </div>
+        <div class="btn" @click="navBtn">
+          <div class="tt">
+            異國料理<small>Global Cuisine </small> 
+          </div>
+        </div>
+        <div class="btn" @click="navBtn">
+          <div class="tt">
+            餐酒館<small>Bistro</small> 
+          </div>
+        </div>
+        <div class="btn" @click="navBtn">
+          <div class="tt">
+            麻辣鍋物<small>Hot Pot</small> 
+          </div>
+          
+        </div>
+        <div class="btn" @click="navBtn">
+          <div class="tt">
+            日式燒肉<small>Yakiniku</small> 
+          </div>
+          
+        </div>
+        <div class="btn" @click="navBtn">
+          <div class="tt">
+            酒吧<small>Bar</small> 
+          </div>
+          
+        </div>
+        <div class="btn" @click="navBtn">
+          <div class="tt">
+            居酒屋<small>Izakaya</small> 
+          </div>
+          
+        </div>
+        <div class="btn" @click="navBtn">
+          <div class="tt">
+            精釀酒吧<small>Craft Beer</small> 
+          </div>
+          
+        </div>
+        <div class="btn" @click="navBtn">
+          <div class="tt">
+            全部餐廳<small>All</small> 
+          </div>
+          
+        </div>
+      </div>
+      <div class="items">
+        <div class="item">
+          <img src="./assets/img/bar-1.png">
+          <div class="title">吧沐 <div class="small">Bar</div></div>
+          <div class="name">吧沐</div>
+        </div>
+        <div class="item">
+          <img src="./assets/img/bar-2.png">
+          <div class="title">吧沐 <div class="small">Bar</div></div>
+          <div class="name">吧沐</div>
+        </div>
+        <div class="item">
+          <img src="./assets/img/bar-3.png">
+          <div class="title">吧沐 <div class="small">Bar</div></div>
+          <div class="name">吧沐</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-5">
+      <div class="content">
+        <div class="title gold text-center">PARTY TIME <br class="show-sm"> 2021派對餐廳大賞活動說明</div>
+        <div class="line"></div>
+        <div class="sub-title gold text-center">結帳3重優惠 天天驚喜 64 折起</div>
+        <div class="note">
+          <div class="paragraph">
+            <div class="title">第 1 重 台灣代駕優惠</div>
+            <div class="text">合作餐廳品牌提供以 SCAN & PAY 消費之用戶結帳金額 10％~15% 之折扣，餐廳優惠無上限；各餐廳詳細優惠內容，以台灣代駕活動網頁標示為準。</div>
+          </div>
+          <div class="paragraph">
+            <div class="title">第 2 重 永豐加碼優惠</div>
+            <div class="text">於台灣代駕APP 內綁定永豐銀行信用卡，並使用 SCAN & PAY 支付，可另享結帳金額 15% 之刷卡金回饋。</div>
+          </div>
+          <div class="paragraph">
+            <div class="title"> 第 3 重 永豐 x Apple Pay 優惠</div>
+            <div class="text">以台灣代駕APP掃碼，並於 SCAN & PAY 選用 Apple Pay 支付，加碼 10％ 刷卡金回饋。如 Apple Pay 綁定之信用卡為永豐銀行，可享結帳金額 25% 之刷卡金回饋。
+            第二、三重永豐加碼刷卡金回饋限制：每卡單店單日，僅針對第 1 筆交易提供刷卡金回饋，如持卡人於單一店家有多筆消費交易，則以持卡人第一筆交易為準，單筆刷卡金回饋上限為 300 元。舉例：用戶於提供 15% 折扣之餐廳，消費原價 ＄1,000 之餐點，以台灣代駕APP SCAN & PAY 功能結帳並選用 Apple Pay 綁定永豐信用卡付款，享現折 ＄150 （$1,000 x15%)，折扣後實際支付金額為 $850 ，次月可獲得永豐銀行提供之 25% 加碼刷卡金回饋 $213 ($850 x 25%)，總計共獲得 $363 （$150+$213) 之優惠。</div>
+          </div>
+
+          <div class="process">
+            <div class="title">PARTY TIME 2021派對餐廳大賞付款流程小教學：</div>
+            <div class="items">
+              <div class="item">
+                <div class="pic empty">
+                  <img class="app" src="./assets/img/app.png" alt="twdd-app">
+                </div>
+                <div class="num gold">1</div>
+                <div class="text gold">開啟 台灣代駕 APP</div>
+              </div>
+              <div class="item">
+                <div class="pic"></div>
+                <div class="num gold">2</div>
+                <div class="text gold">點選左下角大頭照後<br class="show-sm">點選 TWDD</div>
+              </div>
+              <div class="item">
+                <div class="pic"></div>
+                <div class="num gold">3</div>
+                <div class="text gold">點選 Scan&Play 按鈕<br class="show-sm">開啟 QR Code 掃描器</div>
+              </div>
+              <div class="item">
+                <div class="pic"></div>
+                <div class="num gold">4</div>
+                <div class="text gold">掃描餐廳 QR Code<br class="show-sm">進入付款流程</div>
+              </div>
+              <div class="item">
+                <div class="pic"></div>
+                <div class="num gold">5</div>
+                <div class="text gold">輸入折扣後金額<br class="show-sm">並完成付款</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="title">謹慎理財 信用至上</div>
+            <div class="text">24小時服務專線：(02)2528-7776/08000-058-888(限市話) <br>
+            循環信用利率年息2.74% ~ 15%(基準日 2015/8/3)，預借現金手續費：預借現金金額 X 3.5% + NT$100</div>
+          </div>
+          <div class="btns">
+            <button class="btn"> 立即申辦永豐卡 </button>
+            <button class="btn"> 立即下載 台灣代駕 APP </button>
+          </div>
+          <div class="notice">
+            <div class="add">+</div>
+            <div class="text">注意事項</div>
+            <div class="download">立即下載 台灣代駕 APP</div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="sec-6">
+      <div class="content">
+        <div class="video">
+          <img src="./assets/img/video.jpg">
+          <img src="./assets/img/play.png" class="play">
+        </div>
+        <div class="cont">
+          <div class="title">關於台灣代駕</div>
+          <div class="sub-title">
+            酒後代駕第一品牌！全國市佔率最高、300元起價格最低、平均10分鐘內抵達效率最快、1000萬代駕責任保險保額最高。專業駕駛、經驗豐富，讓您人車平安回家。
+          </div>
+          <ul>
+            <li>費用最低
+              <div class="text-white">代駕服務費最低300元起</div>
+            </li>
+            <li>嚴選駕駛
+              <div class="text-white">嚴選具職業駕照的專業駕駛</div>
+            </li>
+            <li>責任保險
+              <div class="text-white">投保1000萬人車責任險</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="social">
+        <div class="btn"><img src="./assets/img/fb.png"></div>
+        <div class="btn"><img src="./assets/img/ig.png"></div>
+        <div class="btn"><img src="./assets/img/web.png"></div>
+      </div>
+
+    </section>
+  </div>
+  
+</body>
+<script src="./assets/js/vendor/jquery.min.js"></script>
+<script src="./assets/js/vendor/vue.js"></script>
+<script type="module" src="./assets/js/index.js"></script>
+</html>
