@@ -1,6 +1,6 @@
 export default {
   model: {
-    event: [],
+    event: ['close'],
   },
   props: {
     store: Object,
@@ -8,6 +8,7 @@ export default {
   components: {},
   template: `
     <div class="modal">
+      <div class="close btn" @click="closeBtn">X</div>
       <div class="modal-body text-center">
         <div class="modal-title">好米亞</div>
       </div>
@@ -27,6 +28,9 @@ export default {
     init: function () {
       console.log("store init");
     },
+    closeBtn:function(){
+      this.$emit('close');
+    }
   },
   beforeDestroy: function () {
     this.subject.next();

@@ -55,16 +55,11 @@ body {
   }
 }
 
-
-.menu-open{
+.modal-open, .menu-open{
   overflow: hidden;
-
-  .menu-content{
-    top: 0;
-  }
 }
-.modal-open{
-  overflow: hidden;
+.menu-open .menu-content{
+  top: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -291,7 +286,7 @@ h1, h2, h3, h4, h5, h6 {
       padding-top: 80px;
     }
     @media #{$sml}{
-      height: 1380px;
+      height: 750px;
       padding-top: 50px;
     }
 
@@ -303,7 +298,7 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 80px;
       }
       @media #{$sml}{
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         margin-top: 30px;
       }
       .plat{
@@ -312,7 +307,7 @@ h1, h2, h3, h4, h5, h6 {
           width: 250px;
         }
         @media #{$sml}{
-          // width: 80%;
+          width: 30%;
         }
       }
     }
@@ -874,6 +869,19 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   z-index: 120;
   overflow: hidden;
+
+  .close{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: $text;
+    color:#fff;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+  }
 
   .modal-body{
     overflow-y: auto;

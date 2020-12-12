@@ -34,7 +34,7 @@ const app = new Vue({
     getData(this.url).then(res => {
       console.log(res)
     })
-    this.isDetailModal = true;
+    // this.isDetailModal = true;
   },
   methods:{
     menuBtn:function(){
@@ -43,6 +43,9 @@ const app = new Vue({
     },
     navBtn:function(){
       console.log('click');
+    },
+    closeModal:function(){
+      this.isDetailModal=false;
     },
     goto:function(section){
       $('html, body').animate({
