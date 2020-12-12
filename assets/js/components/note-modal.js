@@ -10,28 +10,7 @@ export default {
     <div class="modal">
       <div class="close btn" @click="closeBtn">X</div>
       <div class="modal-body">
-        <div class="modal-title text-center">好米亞</div>
-        <div class="store-pics">
-          <div class="pic-list">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="http://placehold.it/680x456/cdd/fff.png"></div>
-              <div class="swiper-slide"><img src="http://placehold.it/680x456/568/fff.png"></div>
-              <div class="swiper-slide"><img src="http://placehold.it/680x456/254/fff.png"></div>
-              <div class="swiper-slide"><img src="http://placehold.it/680x456/6e4/fff.png"></div>
-            </div>
-          </div>
-
-          <div class="swiper-btn">
-            <div class="btn prev-btn">
-              <img src="./assets/img/svg/prev_btn.svg">
-            </div>
-            <div class="btn next-btn">
-              <img src="./assets/img/svg/next_btn.svg">
-            </div>
-          </div>
-        </div>
-        
-        
+        <div class="modal-title text-center">注意事項</div>
         <div class="store-info">
           <div class="modal-subtitle">店家介紹</div>
           <p>鑄鐵招牌上的 「好米亞」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間，搭配優雅的木質桌椅，如同置身歐洲溫馨餐酒館般驚喜。人氣必點包含經典排餐 「脆皮法式櫻桃鴨胸」、「秘製醃醬炭烤戰斧豬排」，到每日限量的「海膽燉飯」，將新鮮蛤蜊與龍蝦醬汁拌煮米粒，搭配濃郁海膽，口口都是鮮甜海味！除了優秀的鹹食，好米亞的甜點同樣可圈可點，店家堅持使用法國進口麵粉、依思尼發酵奶油以及天然香草棒等高品質原料烘焙，包含選用新鮮黃檸檬製作的檸檬千層派、時令水果為基底的千層，無論是聚餐約會的正餐或午茶時光，好米亞都是值得一訪再訪的好所在。</p>
@@ -63,12 +42,7 @@ export default {
     };
   },
   mounted: function () {
-    const swiper = new Swiper('.pic-list', {
-      navigation: {
-        nextEl: '.next-btn',
-        prevEl: '.prev-btn',
-      },
-    })
+    console.log('note init');
   },
   methods: {
     closeBtn:function(){

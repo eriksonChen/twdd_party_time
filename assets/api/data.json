@@ -1,10 +1,18 @@
-[
-  {
-    "id":"001",
-    "name":"item 1"
+{
+  "url":{
+    "fb":"https://www.facebook.com/twdd5209/",
+    "ig":"https://www.instagram.com/twdd.tw/",
+    "web":"https://twdd.tw",
+    "app":"https://goo.gl/kIoR15"
   },
-  {
-    "id":"002",
-    "name":"item 2"
-  }
-]
+  "stores":[
+    {
+      "id":"001",
+      "name":"item 1"
+    },
+    {
+      "id":"002",
+      "name":"item 2"
+    }
+  ]
+}

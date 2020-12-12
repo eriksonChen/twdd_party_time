@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
   <title>TWDD - 派對餐廳</title>
+  <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./assets/css/style.min.css">
 </head>
 <body>
   <div id="vue" class="wrap" >
     <detail-modal v-if="isDetailModal" @close="closeModal"></detail-modal>
+    <note-modal v-if="isNoteModal" @close="closeModal"></note-modal>
     <div class="menu-content">
       <div class="menu-title"><img src="./assets/img/logo-lg.png"></div>
       <div class="menu-text btn" @click="goto(1)">home</div>
@@ -132,17 +134,17 @@
         </div>
       </div>
       <div class="items">
-        <div class="item">
+        <div class="item" @click="openDetail">
           <img src="./assets/img/bar-1.png">
           <div class="title">吧沐 <div class="small">Bar</div></div>
           <div class="name">吧沐</div>
         </div>
-        <div class="item">
+        <div class="item" @click="openDetail">
           <img src="./assets/img/bar-2.png">
           <div class="title">吧沐 <div class="small">Bar</div></div>
           <div class="name">吧沐</div>
         </div>
-        <div class="item">
+        <div class="item" @click="openDetail">
           <img src="./assets/img/bar-3.png">
           <div class="title">吧沐 <div class="small">Bar</div></div>
           <div class="name">吧沐</div>
@@ -209,13 +211,13 @@
             <div class="text">24小時服務專線：(02)2528-7776/0800-058-888 (限市話)循環信用利率年息2.74%~15% (基準日2015/8/3)，預借現金手續費：預借現金金額X3.5%+指定金額(NT$100/3.5美元/350日圓/3歐元)其他費用請上永豐銀行網站查詢</div>
           </div>
           <div class="btns">
-            <button class="btn"> 立即申辦永豐卡 </button>
-            <button class="btn"> 立即下載 台灣代駕 APP </button>
+            <a :href="url.app" target="_blank" class="btn"> 立即申辦永豐卡 </a>
+            <a :href="url.app" target="_blank" class="btn"> 立即下載 台灣代駕 APP </a>
           </div>
           <div class="notice">
-            <div class="add">+</div>
+            <div class="add" @click.stop="openNote">+</div>
             <div class="text">注意事項</div>
-            <div class="download">立即下載 台灣代駕 APP</div>
+            <a :href="url.app" class="btn download" target="_blank">立即下載 台灣代駕 APP</a>
           </div>
         </div>
         
@@ -247,9 +249,9 @@
         </div>
       </div>
       <div class="social">
-        <div class="btn"><img src="./assets/img/fb.png"></div>
-        <div class="btn"><img src="./assets/img/ig.png"></div>
-        <div class="btn"><img src="./assets/img/web.png"></div>
+        <a :href="url.fb" class="btn" target="_blank"><img src="./assets/img/fb.png"></a>
+        <a :href="url.ig" class="btn" target="_blank"><img src="./assets/img/ig.png"></a>
+        <a :href="url.web" class="btn" target="_blank"><img src="./assets/img/web.png"></a>
       </div>
 
     </section>
@@ -259,5 +261,6 @@
 <script src="./assets/js/vendor/jquery.min.js"></script>
 <script src="./assets/js/vendor/vue.js"></script>
 <script src="./assets/js/vendor/Rx.min.js"></script>
+<script src="./assets/js/vendor/swiper-bundle.min.js"></script>
 <script type="module" src="./assets/js/index.js"></script>
 </html>

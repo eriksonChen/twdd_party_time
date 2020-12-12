@@ -1,16 +1,20 @@
 import {getData} from './components/fetch.js';
 import detailModal from './components/detail-modal.js';
+import noteModal from './components/note-modal.js';
 
 const app = new Vue({
   el: '#vue',
   components: {
-    detailModal
+    detailModal,
+    noteModal
   },
   data: {
-    url: './assets/api/data.json',
+    config: './assets/api/data.json',
     title: "hello world~",
     isMenu:false,
     isDetailModal:false,
+    isNoteModal:false,
+    url:{}
   },
   watch: {
     isMenu:function(val){
@@ -21,31 +25,48 @@ const app = new Vue({
       }
     },
     isDetailModal:function(val){
+      this.setBodyClass(val);
+    },
+    isNoteModal:function(val){
+      this.setBodyClass(val);
+    }
+  },
+  computed:{
+    
+  },
+  
+  mounted: function(){
+    getData(this.config).then(res => {
+      console.log(res)
+      this.url = res.url;
+    })
+    // this.isDetailModal = true;
+  },
+  methods:{
+    setBodyClass:function(val){
       if(val){
         $('body').addClass('modal-open');
       }else{
         $('body').removeClass('modal-open');
       }
-    }
-  },
-  
-  mounted: function(){
-    // $('body').addClass('menu-open');
-    getData(this.url).then(res => {
-      console.log(res)
-    })
-    // this.isDetailModal = true;
-  },
-  methods:{
+    },
     menuBtn:function(){
       console.log('menu click');
       this.isMenu = !this.isMenu;
     },
     navBtn:function(){
-      console.log('click');
+      // console.log('click');
     },
     closeModal:function(){
-      this.isDetailModal=false;
+      this.isDetailModal = false;
+      this.isNoteModal = false;
+    },
+    openDetail:function(){
+      this.isDetailModal = true;
+    },
+    openNote:function(){
+      console.log('注意事項');
+      this.isNoteModal = true;
     },
     goto:function(section){
       $('html, body').animate({
