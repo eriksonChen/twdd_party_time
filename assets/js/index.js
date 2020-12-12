@@ -40,7 +40,7 @@ const app = new Vue({
       console.log(res)
       this.url = res.url;
     })
-    // this.isDetailModal = true;
+    // this.isNoteModal = true;
   },
   methods:{
     setBodyClass:function(val){
