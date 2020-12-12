@@ -8,15 +8,8 @@ export default {
   components: {},
   template: `
     <div class="modal">
-      <div class="modal-body">
-        <h1> this is modal </h1>
-        <h1> this is modal </h1>
-        <h1> this is modal </h1>
-        <h1> this is modal </h1>
-        <h1> this is modal </h1>
-        <h1> this is modal </h1>
-        <h1> this is modal </h1>
-        <h1> this is modal </h1>
+      <div class="modal-body text-center">
+        <div class="modal-title">好米亞</div>
       </div>
       <div class="modal-bg"></div>
     <div>
