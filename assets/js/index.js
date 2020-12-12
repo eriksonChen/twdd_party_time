@@ -1,12 +1,16 @@
-import {getData} from './components/fetch.js'
+import {getData} from './components/fetch.js';
+import detailModal from './components/detail-modal.js';
+
 const app = new Vue({
   el: '#vue',
   components: {
+    detailModal
   },
   data: {
     url: './assets/api/data.json',
     title: "hello world~",
     isMenu:false,
+    isDetailModal:false,
   },
   watch: {
     isMenu:function(val){
@@ -16,6 +20,13 @@ const app = new Vue({
         $('body').removeClass('menu-open');
       }
     },
+    isDetailModal:function(val){
+      if(val){
+        $('body').addClass('modal-open');
+      }else{
+        $('body').removeClass('modal-open');
+      }
+    }
   },
   
   mounted: function(){
@@ -23,6 +34,7 @@ const app = new Vue({
     getData(this.url).then(res => {
       console.log(res)
     })
+    this.isDetailModal = true;
   },
   methods:{
     menuBtn:function(){

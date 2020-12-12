@@ -63,6 +63,9 @@ body {
     top: 0;
   }
 }
+.modal-open{
+  overflow: hidden;
+}
 
 h1, h2, h3, h4, h5, h6 {
   color: $lightGray;
@@ -862,6 +865,36 @@ h1, h2, h3, h4, h5, h6 {
     
   }
 
+}
+
+.modal{
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 120;
+  overflow: hidden;
+
+  .modal-body{
+    overflow-y: auto;
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    color: $text;
+    padding: 30px;
+    background-color: #fff;
+  }
+
+
+  .modal-bg{
+    position: absolute;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: -1;
+  }
 }
 
 .btn{

@@ -8,6 +8,7 @@
 </head>
 <body>
   <div id="vue" class="wrap" >
+    <detail-modal v-if="isDetailModal"></detail-modal>
     <div class="menu-content">
       <div class="menu-title"><img src="./assets/img/logo-lg.png"></div>
       <div class="menu-text btn" @click="goto(1)">home</div>
@@ -257,5 +258,6 @@
 </body>
 <script src="./assets/js/vendor/jquery.min.js"></script>
 <script src="./assets/js/vendor/vue.js"></script>
+<script src="./assets/js/vendor/Rx.min.js"></script>
 <script type="module" src="./assets/js/index.js"></script>
 </html>
