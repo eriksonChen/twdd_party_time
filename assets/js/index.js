@@ -14,7 +14,10 @@ const app = new Vue({
     isMenu:false,
     isDetailModal:false,
     isNoteModal:false,
-    url:{}
+    url:{},
+    stores:[],
+    tarStore:{},
+    storeDetail:{}
   },
   watch: {
     isMenu:function(val){
@@ -34,11 +37,12 @@ const app = new Vue({
   computed:{
     
   },
-  
   mounted: function(){
     getData(this.config).then(res => {
-      console.log(res)
       this.url = res.url;
+      this.stores = res.stores;
+      this.tarStore = res.stores[0];
+      console.log(this.stores);
     })
     // this.isNoteModal = true;
   },
@@ -50,22 +54,16 @@ const app = new Vue({
         $('body').removeClass('modal-open');
       }
     },
-    menuBtn:function(){
-      console.log('menu click');
-      this.isMenu = !this.isMenu;
-    },
-    navBtn:function(){
-      // console.log('click');
-    },
     closeModal:function(){
       this.isDetailModal = false;
       this.isNoteModal = false;
     },
-    openDetail:function(){
+    openDetail:function(store){
+      this.storeDetail = store;
+      this.storeDetail.en = this.tarStore.englishName;
       this.isDetailModal = true;
     },
     openNote:function(){
-      console.log('注意事項');
       this.isNoteModal = true;
     },
     goto:function(section){
@@ -73,7 +71,9 @@ const app = new Vue({
         scrollTop: $(".sec-"+section).offset().top
       }, 'slow');
       this.isMenu = false;
-
+    },
+    isActive:function(name){
+      return this.tarStore.chineseName === name;
     }
   }
 })

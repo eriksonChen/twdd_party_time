@@ -7,12 +7,436 @@
   },
   "stores":[
     {
-      "id":"001",
-      "name":"item 1"
+      "chineseName":"台式熱炒",
+      "englishName":"Stir-Fries",
+      "list":[
+        {
+          "name":"熱炒-1",
+          "intro": "鑄鐵招牌上的 「熱炒 1」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-1.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        },
+        {
+          "name":"熱炒-2",
+          "intro": "鑄鐵招牌上的 「熱炒 2」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-2.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        },
+        {
+          "name":"熱炒-3",
+          "intro": "鑄鐵招牌上的 「熱炒 3」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-3.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        }
+      ]
     },
     {
-      "id":"002",
-      "name":"item 2"
+      "chineseName":"中餐廳",
+      "englishName":"Chinese Cuisine",
+      "list":[
+        {
+          "name":"中餐廳-1",
+          "intro": "鑄鐵招牌上的 「中餐廳 1」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-1.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        },
+        {
+          "name":"中餐廳-2",
+          "intro": "鑄鐵招牌上的 「中餐廳 2」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-2.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        },
+        {
+          "name":"中餐廳-3",
+          "intro": "鑄鐵招牌上的 「中餐廳 3」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-3.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        }
+      ]
+    },
+    {
+      "chineseName":"異國料理",
+      "englishName":"Global Cuisine",
+      "list":[
+        {
+          "name":"異國料理-1",
+          "intro": "鑄鐵招牌上的 「異國料理 1」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-2.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        },
+        {
+          "name":"異國料理-2",
+          "intro": "鑄鐵招牌上的 「異國料理 2」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-3.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        },
+        {
+          "name":"異國料理-3",
+          "intro": "鑄鐵招牌上的 「異國料理 3」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-1.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        }
+      ]
+    },
+    {
+      "chineseName":"餐酒館",
+      "englishName":"Bistro",
+      "list":[
+        {
+          "name":"餐酒館-1",
+          "intro": "鑄鐵招牌上的 「餐酒館 1」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-1.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        },
+        {
+          "name":"餐酒館-2",
+          "intro": "鑄鐵招牌上的 「餐酒館 2」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-2.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        },
+        {
+          "name":"餐酒館-3",
+          "intro": "鑄鐵招牌上的 「餐酒館 3」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-3.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        }
+      ]
+    },
+    {
+      "chineseName":"麻辣鍋物",
+      "englishName":"Hot Pot",
+      "list":[
+        {
+          "name":"麻辣鍋物-1",
+          "intro": "鑄鐵招牌上的 「麻辣鍋物 1」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-1.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        },
+        {
+          "name":"麻辣鍋物-2",
+          "intro": "鑄鐵招牌上的 「麻辣鍋物 2」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-2.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        },
+        {
+          "name":"麻辣鍋物-3",
+          "intro": "鑄鐵招牌上的 「麻辣鍋物 3」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-3.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        }
+      ]
+    },
+    {
+      "chineseName":"日式燒肉",
+      "englishName":"Yakiniku",
+      "list":[
+        {
+          "name":"日式燒肉-1",
+          "intro": "鑄鐵招牌上的 「日式燒肉 1」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-1.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        },
+        {
+          "name":"日式燒肉-2",
+          "intro": "鑄鐵招牌上的 「日式燒肉 2」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-2.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        },
+        {
+          "name":"日式燒肉-3",
+          "intro": "鑄鐵招牌上的 「日式燒肉 3」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-3.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        }
+      ]
+    },
+    {
+      "chineseName":"酒吧",
+      "englishName":"Bar",
+      "list":[
+        {
+          "name":"酒吧-1",
+          "intro": "鑄鐵招牌上的 「酒吧 1」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-1.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        },
+        {
+          "name":"酒吧-2",
+          "intro": "鑄鐵招牌上的 「酒吧 2」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-2.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        },
+        {
+          "name":"酒吧-3",
+          "intro": "鑄鐵招牌上的 「酒吧 3」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-3.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        }
+      ]
+    },
+    {
+      "chineseName":"居酒屋",
+      "englishName":"Izakaya",
+      "list":[
+        {
+          "name":"居酒屋-1",
+          "intro": "鑄鐵招牌上的 「居酒屋 1」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-1.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        },
+        {
+          "name":"居酒屋-2",
+          "intro": "鑄鐵招牌上的 「居酒屋 2」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-2.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        },
+        {
+          "name":"居酒屋-3",
+          "intro": "鑄鐵招牌上的 「居酒屋 3」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-3.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        }
+      ]
+    },
+    {
+      "chineseName":"精釀酒吧",
+      "englishName":"Craft Beer",
+      "list":[
+        {
+          "name":"精釀酒吧-1",
+          "intro": "鑄鐵招牌上的 「精釀酒吧 1」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-1.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        },
+        {
+          "name":"精釀酒吧-2",
+          "intro": "鑄鐵招牌上的 「精釀酒吧 2」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-2.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        },
+        {
+          "name":"精釀酒吧-3",
+          "intro": "鑄鐵招牌上的 「精釀酒吧 3」 取自台語諧音，除了代表台灣在地精神，更傳遞出店家的理念。甫踏入好米亞餐酒館，就能感受到沉穩、舒適的空間",
+          "addr":"106 台北市大安區敦化南路一段270巷6號",
+          "tel": "02-81818181",
+          "time": "週一至週五、週日 11:30-22:30",
+          "fb":"https://www.facebook.com/twdd5209/",
+          "ig":"https://www.instagram.com/twdd.tw/",
+          "pic":"./assets/img/bar-3.png",
+          "images":[
+            "http://placehold.it/680x456/cdd/fff.png",
+            "http://placehold.it/680x456/568/fff.png"
+          ]
+        }
+      ]
     }
   ]
 }

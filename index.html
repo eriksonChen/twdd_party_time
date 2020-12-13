@@ -9,7 +9,7 @@
 </head>
 <body>
   <div id="vue" class="wrap" >
-    <detail-modal v-if="isDetailModal" @close="closeModal"></detail-modal>
+    <detail-modal v-if="isDetailModal" :detail="storeDetail" @close="closeModal"></detail-modal>
     <note-modal v-if="isNoteModal" @close="closeModal"></note-modal>
     <div class="menu-content">
       <div class="menu-title"><img src="./assets/img/logo-lg.png"></div>
@@ -18,8 +18,9 @@
       <div class="menu-text btn" @click="goto(5)">活動說明</div>
       <div class="menu-text btn" @click="goto(6)">關於台灣代駕</div>
     </div>
-    <div class="menu-btn" @click="menuBtn">
-      <img src="./assets/img/menu.png" alt="menu">
+    <div class="menu-btn" @click="isMenu=!isMenu">
+      <img v-if="!isMenu" src="./assets/img/menu.png" alt="menu">
+      <img v-if="isMenu" src="./assets/img/menu-back.png" alt="menu">
     </div>
     <section class="sec-1">
       <div class="logo-lg">
@@ -76,79 +77,26 @@
 
     <section class="sec-4">
       <div class="nav">
-        <div class="btn active" @click="navBtn">
+        <div class="btn" :class="{active: isActive(store.chineseName)}"  @click="tarStore = store" v-for="store in stores">
           <div class="tt">
-            台式熱炒<small>Stir-Fries</small>
+            {{store.chineseName}}<small>{{store.englishName}}</small>
           </div>
         </div>
-        <div class="btn" @click="navBtn">
-          <div class="tt">
-            中餐廳<small>Chinese Cuisine</small> 
-          </div>
-        </div>
-        <div class="btn" @click="navBtn">
-          <div class="tt">
-            異國料理<small>Global Cuisine </small> 
-          </div>
-        </div>
-        <div class="btn" @click="navBtn">
-          <div class="tt">
-            餐酒館<small>Bistro</small> 
-          </div>
-        </div>
-        <div class="btn" @click="navBtn">
-          <div class="tt">
-            麻辣鍋物<small>Hot Pot</small> 
-          </div>
-          
-        </div>
-        <div class="btn" @click="navBtn">
-          <div class="tt">
-            日式燒肉<small>Yakiniku</small> 
-          </div>
-          
-        </div>
-        <div class="btn" @click="navBtn">
-          <div class="tt">
-            酒吧<small>Bar</small> 
-          </div>
-          
-        </div>
-        <div class="btn" @click="navBtn">
-          <div class="tt">
-            居酒屋<small>Izakaya</small> 
-          </div>
-          
-        </div>
-        <div class="btn" @click="navBtn">
-          <div class="tt">
-            精釀酒吧<small>Craft Beer</small> 
-          </div>
-          
-        </div>
-        <div class="btn" @click="navBtn">
+        
+        <!-- <div class="btn" @click="navBtn">
           <div class="tt">
             全部餐廳<small>All</small> 
           </div>
           
-        </div>
+        </div> -->
       </div>
       <div class="items">
-        <div class="item" @click="openDetail">
-          <img src="./assets/img/bar-1.png">
-          <div class="title">吧沐 <div class="small">Bar</div></div>
-          <div class="name">吧沐</div>
+        <div class="item" @click="openDetail(item)" v-for="(item, index) in tarStore.list" :key="index">
+          <img :src="item.pic">
+          <div class="title">{{item.name}} <div class="small">{{tarStore.englishName}}</div></div>
+          <div class="name">{{item.name}}</div>
         </div>
-        <div class="item" @click="openDetail">
-          <img src="./assets/img/bar-2.png">
-          <div class="title">吧沐 <div class="small">Bar</div></div>
-          <div class="name">吧沐</div>
-        </div>
-        <div class="item" @click="openDetail">
-          <img src="./assets/img/bar-3.png">
-          <div class="title">吧沐 <div class="small">Bar</div></div>
-          <div class="name">吧沐</div>
-        </div>
+        
       </div>
     </section>
 

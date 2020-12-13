@@ -1015,3 +1015,7 @@ button{
   border: 0;
   @include rounded();
 }
+
+.swiper-pagination-bullet-active{
+  background-color: $dark;
+}
