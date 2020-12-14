@@ -45,7 +45,7 @@
           <img src="./assets/img/svg/icon-1.svg">
           <div class="title gold">台灣代駕 專屬優惠</div>
           <div class="line"></div>
-          <div class="text">「掃碼付款」結帳 85 折起 <br>餐廳單筆消費滿 $500<br>加贈 $100 代駕優惠券</div>
+          <div class="text">「掃碼付款」結帳85折起 <br>餐廳單筆消費滿 $500<br>加贈 $100 代駕優惠券</div>
         </div>
         <div class="step">
           <img src="./assets/img/svg/icon-2.svg">
@@ -77,25 +77,25 @@
 
     <section class="sec-4">
       <div class="nav">
-        <div class="btn" :class="{active: isActive(store.chineseName)}"  @click="tarStore = store" v-for="store in stores">
+        <div class="btn" :class="{active: isActive(store.chineseName)}"  @click="storeBtn(store)" v-for="store in stores">
           <div class="tt">
             {{store.chineseName}}<small>{{store.englishName}}</small>
           </div>
         </div>
         
-        <!-- <div class="btn" @click="navBtn">
-          <div class="tt">
-            全部餐廳<small>All</small> 
-          </div>
-          
-        </div> -->
       </div>
-      <div class="items">
-        <div class="item" @click="openDetail(item)" v-for="(item, index) in tarStore.list" :key="index">
-          <img :src="item.pic">
-          <div class="title">{{item.name}} <div class="small">{{tarStore.englishName}}</div></div>
-          <div class="name">{{item.name}}</div>
+      <div class="items swiper-container">
+        <div class="swiper-wrapper">
+          <div class="item swiper-slide" @click="openDetail(item)" v-for="(item, index) in tarStore.list" :key="index">
+            <img :src="item.pic" class="swiper-lazy">
+            <div class="title">{{item.name}} <div class="small">{{item.enName}}</div></div>
+            <div class="name">{{item.name}}</div>
+          </div>
         </div>
+        
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
         
       </div>
     </section>

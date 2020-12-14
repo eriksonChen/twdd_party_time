@@ -14,7 +14,9 @@ export default {
         <div class="store-pics">
           <div class="pic-list">
             <div class="swiper-wrapper">
-              <div class="swiper-slide" v-for="pic in detail.images"><img :src="pic+'?text='+detail.en+detail.name"></div>
+              <div class="swiper-slide" v-for="pic in detail.images">
+                <img :src="pic+'?text='+detail.en+detail.name">
+              </div>
             </div>
             <div class="swiper-pagination"></div>
           </div>

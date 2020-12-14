@@ -17,7 +17,8 @@ const app = new Vue({
     url:{},
     stores:[],
     tarStore:{},
-    storeDetail:{}
+    storeDetail:{},
+    swiper:null,
   },
   watch: {
     isMenu:function(val){
@@ -38,15 +39,62 @@ const app = new Vue({
     
   },
   mounted: function(){
-    getData(this.config).then(res => {
+    Rx.Observable.from(getData(this.config))
+    .do(res=>{
       this.url = res.url;
-      this.stores = res.stores;
-      this.tarStore = res.stores[0];
-      console.log(this.stores);
     })
-    // this.isNoteModal = true;
+    .switchMap(data => data.stores)
+    .map(store =>{
+      store.list.forEach(element => {
+        element.enName = store.englishName+'123';
+      });
+      return store;
+    })
+    .toArray()
+    .do(store =>{
+      this.stores = store;
+      this.tarStore = this.stores[0];
+    })
+    .switchMap(x => x)
+    .map(s=>s.list)
+    .concatAll().toArray()
+    .subscribe(list => {
+      const all ={
+        chineseName:"全部餐廳",
+        englishName:"All",
+        list
+      } 
+      this.stores.push(all);
+      
+      setTimeout(()=>{
+        this.setSwiper();
+      },100)
+      
+    })
+
   },
   methods:{
+    setSwiper:function(){
+      this.swiper = new Swiper('.swiper-container', {
+        slidesPerView: 2,
+        // spaceBetween: 30,
+        // slidesPerGroup: 3,
+        loop: true,
+        // pagination: {
+        //   el: '.swiper-pagination',
+        //   clickable: true,
+        // },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 3,
+          }
+        }
+      });
+    },
     setBodyClass:function(val){
       if(val){
         $('body').addClass('modal-open');
@@ -62,6 +110,16 @@ const app = new Vue({
       this.storeDetail = store;
       this.storeDetail.en = this.tarStore.englishName;
       this.isDetailModal = true;
+    },
+    storeBtn:function(type){
+      this.swiper.destroy(false, false);
+      this.tarStore = type;
+      setTimeout(()=>{
+        this.setSwiper();
+      },10)
+      
+
+      console.log('swiper update');
     },
     openNote:function(){
       this.isNoteModal = true;
