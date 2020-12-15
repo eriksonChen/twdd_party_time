@@ -46,7 +46,7 @@ const app = new Vue({
     .switchMap(data => data.stores)
     .map(store =>{
       store.list.forEach(element => {
-        element.enName = store.englishName+'123';
+        element.enName = store.englishName;
       });
       return store;
     })
@@ -60,7 +60,7 @@ const app = new Vue({
     .concatAll().toArray()
     .subscribe(list => {
       const all ={
-        chineseName:"全部餐廳",
+        chineseName:"全部",
         englishName:"All",
         list
       } 

@@ -381,6 +381,9 @@ h1, h2, h3, h4, h5, h6 {
           flex: 20%;
           border-top: 1px solid #999;
           height: 60px;
+          &:nth-child(-n+6){
+            flex:16.66%;
+          }
         }
 
         .tt{
@@ -490,10 +493,19 @@ h1, h2, h3, h4, h5, h6 {
           }
           .title{
             opacity: 1;
+            
+          }
+          .name{
+            display: none;
           }
         }
 
       }
+    }
+
+    .swiper-button-prev, .swiper-button-next{
+      color: white;
+      opacity: 0.75;
     }
   }
 
