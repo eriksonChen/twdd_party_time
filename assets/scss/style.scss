@@ -627,7 +627,6 @@ h1, h2, h3, h4, h5, h6 {
         .pic{
           @include rounded();
           overflow: hidden;
-          background-color: #fff;
           width: 154px;
           height: 307px;
           display: flex;
@@ -913,6 +912,18 @@ h1, h2, h3, h4, h5, h6 {
   .pic-list, .note, .social-btns, .store-info{
     max-width: 680px;
     margin: 0 auto;
+
+    span.icon img{
+      width: initial;
+      height: 20px;
+      margin-bottom: -5px;
+    }
+  }
+
+  .info-list{
+    a{
+      text-decoration: none;
+    }
   }
 
   .modal-body{
@@ -999,6 +1010,17 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px;
     margin-top: 40px;
     margin-bottom: 20px;
+    color: white;
+    font-size: 24px;
+    .sub{
+      font-size: 16px;
+    }
+    @media #{$sml}{
+      font-size: 18px;
+      .sub{
+        font-size: 13px;
+      }
+    }
   }
 
   .social-btns{

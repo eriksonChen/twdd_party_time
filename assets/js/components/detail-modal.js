@@ -37,7 +37,7 @@ export default {
           <div class="modal-subtitle" style="margin-top:20px;">店家資訊</div>
           <div class="info-list">
             <p><strong>地址</strong> 
-              <a v-bind:href="detail.map">
+              <a v-bind:href="detail.map" target="_blank">
                 {{detail.addr}} 
                 <span class="icon"> <img src="./assets/img/svg/launch.svg"> </span> 
               </a>
@@ -46,7 +46,10 @@ export default {
             <p><strong>營業時間</strong>{{detail.time}}</p>
           </div>
         </div>
-        <!-- <div class="note"></div>  -->
+        <div class="note text-center">
+          TWDD 台灣代駕驚喜優惠：64折
+          <div class="sub">(含台灣代駕獨家結帳折扣 + 永豐加碼刷卡金)</div>
+        </div>
         <div class="social-btns">
           <a v-bind:href="detail.fb" target="_blank" class="btn">
             <img src="./assets/img/svg/facebook-icon.svg">
