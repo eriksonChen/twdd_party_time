@@ -1,5 +1,76 @@
 # 台灣代駕 派對餐廳
 
+## 店家資料說明文件
+### 包含活動網站相關連結及各店家資料
+
+`檔案位置` api/data.json
+
+### 參數說明
+
+>`url`: 首頁裡所有的連結
+>
+> - `fb`: 台灣代駕 facebook
+> - `ig`: 台灣代駕 ig
+> - `bank`: 兆豐銀行連結
+> - `web`: 台灣代駕官網
+> - `app`: 台灣代駕 app 下載連結
+>
+>
+>`stores`: 所有店家資訊
+>
+> - `chineseName `: 店家種類中文名
+> - `englishName `: 店家種類英文名
+> - `list`: 該種類的店家清單
+>  -  `name`: 店家名稱
+>  -  `intro`: 店家介紹
+>  -  `addr`: 店家地址
+>  -  `tel`: 店家電話
+>  -  `time`: 店家地址
+>  -  `fb`: 店家地址
+>  -  `map`: 店家地址
+>  -  `pic`: 首頁店家選單的照片路徑(正方形：480x480)，請放在 "assets/img/" 資料夾內
+>  -  `img`: 內頁店家的照片路徑，可以多張(尺寸680x456)，請放在 "assets/img/" 資料夾內
+
+
+```
+{
+    "url":{
+        "fb":"https://www.facebook.com/twdd5209/",
+        "ig":"https://www.instagram.com/twdd.tw/",
+        "bank":"https://google.com",
+        "web":"https://twdd.tw",
+        "app":"https://goo.gl/kIoR15"
+    },
+    "stores":[
+    {
+        "chineseName":"台菜",
+        "englishName":"Stir-Fries",
+        "list"[
+            {
+                "name":"台菜-1",
+                "intro": "店家介紹店家介紹店家介紹店家介紹店家介紹店家介紹店家介紹店家介紹店家介紹",
+                "addr":"106台北市大安區敦化南路一段270巷6號",
+                "tel": "02-81818181",
+                "time": "週一至週五、週日 11:30-22:30",
+                "fb":"https://www.facebook.com/twdd5209/",
+                "map":"https://g.page/twdd5209?share",
+                "pic":"./assets/img/bar-1.png",
+                "images":[
+                    "http://placehold.it/680x456/cdd/fff.png",
+                    "http://placehold.it/680x456/568/fff.png"
+                ]
+            },
+            ...
+        ]
+    },
+    ...
+    ]
+}
+
+```
+
+## 相關資訊
+
 ### GoShare Select
 https://www.gq.com.tw/event/2020/goshare_select
 
@@ -33,4 +104,6 @@ https://www.elegantthemes.com/layouts/food-drink/coffee-shop-guide-page/live-dem
 1. 活動說明 + 付款流程  (參考GoShare，純文字活動說明，有完整內容縮放按鈕。) (APP下載)
 
 1. 影片+台灣代駕服務簡介 (參考截圖版面，左邊內嵌影片，右邊簡略文字介紹代駕)
+
+
 
