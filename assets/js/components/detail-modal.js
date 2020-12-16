@@ -47,7 +47,7 @@ export default {
           </div>
         </div>
         <div class="note text-center">
-          TWDD 台灣代駕驚喜優惠：64折
+        {{detail.note}}
           <div class="sub">(含台灣代駕獨家結帳折扣 + 永豐加碼刷卡金)</div>
         </div>
         <div class="social-btns">

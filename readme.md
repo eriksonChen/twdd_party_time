@@ -15,7 +15,6 @@
 > - `web`: 台灣代駕官網
 > - `app`: 台灣代駕 app 下載連結
 >
->
 >`stores`: 所有店家資訊
 >
 > - `chineseName `: 店家種類中文名
@@ -28,6 +27,7 @@
 >  -  `time`: 店家地址
 >  -  `fb`: 店家地址
 >  -  `map`: 店家地址
+>  -  `note`: 店家優惠說明
 >  -  `pic`: 首頁店家選單的照片路徑(正方形：480x480)，請放在 "assets/img/" 資料夾內
 >  -  `img`: 內頁店家的照片路徑，可以多張(尺寸680x456)，請放在 "assets/img/" 資料夾內
 
@@ -55,6 +55,7 @@
                 "fb":"https://www.facebook.com/twdd5209/",
                 "map":"https://g.page/twdd5209?share",
                 "pic":"./assets/img/bar-1.png",
+                "note":"TWDD 台灣代駕驚喜優惠：65 折",
                 "images":[
                     "http://placehold.it/680x456/cdd/fff.png",
                     "http://placehold.it/680x456/568/fff.png"
@@ -85,14 +86,15 @@ https://www.elegantthemes.com/layouts/business/coffee-shop-landing-page/live-dem
 1. 俯拍3種類型美食 (不代表任何餐廳，純裝飾)
 1. 有8~10種類型，需有頁籤分類顯示，每個分類3間 (餐廳照片+店名 方形x3) (滑鼠移動有動態效果)
 
- - 台式熱炒 
- - 中餐廳 
- - 異國料理 
- - 餐酒館 
- - 麻辣鍋物 
- - 日式燒肉 
- - 酒吧        
- - 居酒屋   
+ - 台菜 
+ - 川菜 
+ - 鍋物 
+ - 酒吧   
+ - 餐酒館    
+ - 居酒屋 
+ - 日式燒肉      
+ - 韓式燒肉 
+ - 異國料理      
  - 精釀酒吧
 
 1.  餐廳內頁
