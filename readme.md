@@ -14,6 +14,7 @@
 > - `bank`: 永豐銀行連結
 > - `web`: 台灣代駕官網
 > - `app`: 台灣代駕 app 下載連結
+> - `video`: 台灣代駕影片連結
 >
 >`stores`: 所有店家資訊
 >
@@ -39,7 +40,8 @@
         "ig":"https://www.instagram.com/twdd.tw/",
         "bank":"https://google.com",
         "web":"https://twdd.tw",
-        "app":"https://goo.gl/kIoR15"
+        "app":"https://goo.gl/kIoR15",
+        "video":"https://youtu.be/q6mjYe-rPt0"
     },
     "stores":[
     {
