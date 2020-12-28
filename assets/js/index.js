@@ -56,6 +56,7 @@ const app = new Vue({
       this.tarStore = this.stores[0];
     })
     .switchMap(x => x)
+    .filter(x => !x.name)
     .map(s=>s.list)
     .concatAll().toArray()
     .subscribe(list => {
