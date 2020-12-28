@@ -126,7 +126,7 @@ const app = new Vue({
       return this.tarStore.chineseName === name;
     },
     videoBtn:function(){
-      window.open('https://www.youtube.com/watch?v=2tU9FX1iMss', '_blank');
+      window.open(this.url.video, '_blank');
     }
   }
 })
