@@ -53,11 +53,9 @@ const app = new Vue({
     .toArray()
     .do(store =>{
       this.stores = store;
-      this.tarStore = this.stores[0];
     })
     .switchMap(x => x)
-    .filter(x => !x.name)
-    .map(s=>s.list)
+    .map(s=> s.list.filter(x => x.name))
     .concatAll().toArray()
     .subscribe(list => {
       const all ={
@@ -65,7 +63,8 @@ const app = new Vue({
         englishName:"All",
         list
       } 
-      this.stores.push(all);
+      this.stores.unshift(all);
+      this.tarStore = this.stores[0];
       
       setTimeout(()=>{
         this.setSwiper();
@@ -97,11 +96,12 @@ const app = new Vue({
         $('body').removeClass('modal-open');
       }
     },
-    closeModal:function(){
+    closeModal: function(){
       this.isDetailModal = false;
       this.isNoteModal = false;
     },
     openDetail:function(store){
+      if(!store.name) return;
       this.storeDetail = store;
       this.storeDetail.en = this.tarStore.englishName;
       this.isDetailModal = true;

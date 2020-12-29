@@ -88,7 +88,7 @@
         <div class="swiper-wrapper">
           <div class="item swiper-slide" @click="openDetail(item)" v-for="(item, index) in tarStore.list" :key="index">
             <img :src="item.pic" class="swiper-lazy">
-            <div class="title">{{item.name}} <div class="small">{{item.enName}}</div></div>
+            <div class="title" v-if="item.name">{{item.name}} <div class="small">{{item.enName}}</div></div>
             <div class="name">{{item.name}}</div>
           </div>
         </div>
