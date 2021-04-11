@@ -487,6 +487,7 @@
           "addr":"",
           "tel": "",
           "time": "",
+          "isEmpty":true,
           "fb":"https://www.facebook.com/twdd5209/",
           "map":"",
           "pic":"./restaurant/yakiniku/default_2.jpg",

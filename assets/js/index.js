@@ -90,18 +90,12 @@ const app = new Vue({
           }
         }
       });
-      this.swiper.on('slideChange', () => {
-        setTimeout(() => {
-          this.$forceUpdate();
-          console.log('forceUpdate');
-        }, 100);
-      });
-      // setTimeout(() => {
-      //   $('.swiper-wrapper .item').on('click', (e)=>{
-      //     const obj = $(e.currentTarget);
-      //     this.openDetail(obj.data('item'));
-      //   });
-      // }, 100);
+      setTimeout(() => {
+        $('.swiper-wrapper').on('click', '.item', (e)=>{
+          const obj = $(e.currentTarget).data('item');
+          this.openDetail(obj);
+        });
+      }, 100);
     },
     setBodyClass:function(val){
       if(val){
@@ -116,7 +110,6 @@ const app = new Vue({
       this.isMoreModal = false;
     },
     openDetail:function(store){
-      console.log(store);
       if(store.name){
         this.storeDetail = store;
         this.isDetailModal = true;

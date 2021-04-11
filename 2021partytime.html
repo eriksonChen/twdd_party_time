@@ -96,7 +96,9 @@
       </div>
       <div class="items swiper-container">
         <div class="swiper-wrapper">
-          <div class="item swiper-slide" @click="openDetail(item)" v-for="(item, index) in tarStore.list" :key="index">
+          <div class="item swiper-slide" :class="{empty:item.isEmpty}" :data-item="JSON.stringify(item)" 
+          @click.stop="openDetail(item)" 
+          v-for="(item, index) in tarStore.list" :key="index">
             <img :src="item.pic" class="swiper-lazy">
             <div class="title">
               <span v-html="item.name || item.cnName"></span>
