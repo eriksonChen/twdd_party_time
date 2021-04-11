@@ -1,12 +1,14 @@
 import {getData} from './components/fetch.js';
 import detailModal from './components/detail-modal.js';
 import noteModal from './components/note-modal.js';
+import moreModal from './components/more-modal.js';
 
 const app = new Vue({
   el: '#vue',
   components: {
     detailModal,
-    noteModal
+    noteModal,
+    moreModal,
   },
   data: {
     config: './assets/api/data.json',
@@ -14,6 +16,7 @@ const app = new Vue({
     isMenu:false,
     isDetailModal:false,
     isNoteModal:false,
+    isMoreModal:false,
     url:{},
     stores:[],
     tarStore:{},
@@ -33,10 +36,10 @@ const app = new Vue({
     },
     isNoteModal:function(val){
       this.setBodyClass(val);
+    },
+    isMoreModal:function(val){
+      this.setBodyClass(val);
     }
-  },
-  computed:{
-    
   },
   mounted: function(){
     Rx.Observable.from(getData(this.config))
@@ -46,6 +49,7 @@ const app = new Vue({
     .switchMap(data => data.stores)
     .map(store =>{
       store.list.forEach(element => {
+        element.cnName = store.chineseName;
         element.enName = store.englishName;
       });
       return store;
@@ -65,11 +69,9 @@ const app = new Vue({
       } 
       this.stores.unshift(all);
       this.tarStore = this.stores[0];
-      
       setTimeout(()=>{
         this.setSwiper();
       },100)
-      
     })
 
   },
@@ -88,6 +90,18 @@ const app = new Vue({
           }
         }
       });
+      this.swiper.on('slideChange', () => {
+        setTimeout(() => {
+          this.$forceUpdate();
+          console.log('forceUpdate');
+        }, 100);
+      });
+      // setTimeout(() => {
+      //   $('.swiper-wrapper .item').on('click', (e)=>{
+      //     const obj = $(e.currentTarget);
+      //     this.openDetail(obj.data('item'));
+      //   });
+      // }, 100);
     },
     setBodyClass:function(val){
       if(val){
@@ -99,12 +113,17 @@ const app = new Vue({
     closeModal: function(){
       this.isDetailModal = false;
       this.isNoteModal = false;
+      this.isMoreModal = false;
     },
     openDetail:function(store){
-      if(!store.name) return;
-      this.storeDetail = store;
-      this.storeDetail.en = this.tarStore.englishName;
-      this.isDetailModal = true;
+      console.log(store);
+      if(store.name){
+        this.storeDetail = store;
+        this.isDetailModal = true;
+      }else{
+        this.isMoreModal = true;
+      };
+      
     },
     storeBtn:function(type){
       this.swiper.destroy(false, false);
@@ -128,6 +147,6 @@ const app = new Vue({
     },
     videoBtn:function(){
       window.open(this.url.video, '_blank');
-    }
+    },
   }
 })

@@ -20,6 +20,7 @@
   <div id="vue" class="wrap" >
     <detail-modal v-if="isDetailModal" :detail="storeDetail" @close="closeModal"></detail-modal>
     <note-modal v-if="isNoteModal" @close="closeModal"></note-modal>
+    <more-modal v-if="isMoreModal" @close="closeModal"></more-modal>
     <div class="menu-content">
       <div class="menu-title"><img src="./assets/img/logo-lg.png"></div>
       <div class="menu-text btn" @click="goto(1)">home</div>
@@ -97,8 +98,11 @@
         <div class="swiper-wrapper">
           <div class="item swiper-slide" @click="openDetail(item)" v-for="(item, index) in tarStore.list" :key="index">
             <img :src="item.pic" class="swiper-lazy">
-            <div class="title">{{item.name}} <div class="small">{{item.enName}}</div></div>
-            <div class="name">{{item.name}}</div>
+            <div class="title">
+              <span v-html="item.name || item.cnName"></span>
+              <div class="small">{{item.enName}}</div>
+            </div>
+            <div class="name" v-html="item.name || '更多餐廳 即將登場'"></div>
           </div>
         </div>
         
@@ -113,7 +117,6 @@
       <div class="content">
         <div class="title gold text-center">PARTY TIME <br class="show-sm"> 2021派對餐廳大賞活動說明</div>
         <div class="line"></div>
-        <!-- <div class="sub-title gold text-center">場場派對3重送 天天趴踢64折起</div> -->
         <div class="note">
           <div class="paragraph">
             <div class="title">第 1 重 台灣代駕優惠</div>

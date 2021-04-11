@@ -349,8 +349,6 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
 
-    
-
   }
 
   .sec-4{
@@ -923,6 +921,35 @@ h1, h2, h3, h4, h5, h6 {
   .info-list{
     a{
       text-decoration: none;
+    }
+  }
+
+  .modal-image{
+    max-width: 680px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    pointer-events: none;
+    @media #{$sml}{
+      padding: 10px;
+    }
+    .img-cont{
+      position: relative;
+    }
+    .close{
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background-color: #fff;
+      color: #dda47d;
+      @include rounded(50px)
+    }
+    img{
+      @include rounded();
+      pointer-events: auto;
+      border: 3px solid white;
     }
   }
 
