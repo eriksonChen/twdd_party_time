@@ -79,14 +79,20 @@ const app = new Vue({
     setSwiper:function(){
       this.swiper = new Swiper('.swiper-container', {
         slidesPerView: 2,
+        breakpoints: {
+          768: {
+            slidesPerView: 3,
+          }
+        },
         loop: true,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
-        breakpoints: {
-          768: {
-            slidesPerView: 3,
+        on:{
+          breakpoint:function () {
+            this.swiper.update();
+            console.log('breakpoint... 更新 swiper');
           }
         }
       });
