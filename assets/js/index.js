@@ -88,12 +88,6 @@ const app = new Vue({
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
-        },
-        on:{
-          breakpoint:function () {
-            this.swiper.update();
-            console.log('breakpoint... 更新 swiper');
-          }
         }
       });
       setTimeout(() => {
@@ -102,6 +96,10 @@ const app = new Vue({
           this.openDetail(obj);
         });
       }, 100);
+    },
+    setshow:function(item){
+      const width = this.$refs.swiper.clientWidth;
+      return width<768 ? !item.sm_hide : true;
     },
     setBodyClass:function(val){
       if(val){

@@ -487,14 +487,14 @@
           "addr":"",
           "tel": "",
           "time": "",
-          "sm_hide":true,
           "fb":"https://www.facebook.com/twdd5209/",
           "map":"",
           "pic":"./restaurant/yakiniku/default_2.jpg",
           "note":"TWDD 台灣代駕驚喜優惠：? 折",
           "images":[
             "./restaurant/default_content.png"
-          ]
+          ],
+          "sm_hide":true
         }
       ]
     },
